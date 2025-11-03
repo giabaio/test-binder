@@ -12,6 +12,6 @@ WORKDIR /home/${NB_USER}
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 #RUN dpkg -i bmhe_0.1.0-1.0_all.deb && rm bmhe_0.1.0-1.0_all.deb
 #RUN dpkg -i R2jags_0.8-7-1.0_all.deb && rm R2jags_0.8-7-1.0_all.deb
-RUN apt install -f -y bmhe_0.1.0-1.0_all.deb && rm bmhe_0.1.0-1.0_all.deb
+RUN apt install -f -y ./bmhe_0.1.0-1.0_all.deb && rm ./bmhe_0.1.0-1.0_all.deb
 
 USER ${NB_USER}
